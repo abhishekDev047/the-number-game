@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sono:wght@200&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #2196f3;
+            font-family: 'Sono', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .contstart {
+            margin: 10px 200px;
+        }
+
+        .btn {
+            background-color: chartreuse;
+            border: 2px solid chartreuse;
+            border-radius: 5px;
+            padding: 5px 13px;
+        }
+
+        .btn2 {
+            background-color: chartreuse;
+            border: 2px solid chartreuse;
+            border-radius: 5px;
+            padding: 5px 13px;
+        }
+
+        #input {
+            width: 40px;
+            margin: 0px 10px;
+        }
+
+        .thegame {
+            margin-top: 100px;
+        }
+
+        p{
+            font-weight: bold;
+        }
+        span{
+            font-weight: bold;
+        }
+</style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="contstart">
+            <h2 class="start">The Number Game</h2>
+        </div>
+    </div>
+    <section id="section">
+        <div class="container thegame">
+            
+        <div class="container"> <h3>Guess a number between 0-10</h3></div>
+            <div class="container"><input id="input" type="Number">
+            <button class="btn2" onclick={checkfunc()}>Check</button></div>
+        </div>
+        <div class="container">
+            <span id="result"></span>
+        </div>
+    </section>
+</body>
+<script>
+    const Gamestart = () => {
+        console.log("game is starting")
+    };
+    const checkfunc = () => {
+        let count = clearInterval();
+        let a = Math.floor((Math.random() * 10) + 1);
+
+        let b = document.getElementById('input').value;
+        let c = Number(b);
+
+        
+        
+        if(a ==b){
+            let rslt =  document.getElementById('result');
+            result.innerHTML =("Your guess is right the number is " + a);
+            
+        }
+        else{
+            let rslt =  document.getElementById('result');
+            result.innerHTML =("Your guess is wrong the number is " + a);
+            
+        }
+
+    }
+</script>
+
+</html>
